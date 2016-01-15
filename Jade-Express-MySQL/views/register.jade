@@ -1,0 +1,17 @@
+﻿extend layout
+block content
+  div.container
+    h1 Register
+    form(role="form" method="post")
+      div.form-group
+        label Email
+        input.form-control(type="text", name="email")
+      div.form-group
+        label Name
+        input.form-control(type="text", name="name")
+      div.form-group
+        label Password
+        input.form-control(type="password", name="password")
+      input.btn.btn-success.btn-lg.btn-block(type="submit" value="Register")
+    if errmsg
+      h2.errmsg #{errmsg}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mean" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MEAN Stack</title>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container" ng-controller="AppController">
+            <ul class="nav navbar-nav">
+                <li><a href="/#/">Posts</a></li>
+                <li><a href="http://10.10.10.10/#/register">Register</a></li>
+                <li><a href="/#/login">Login</a></li>
+            </ul>
+            <span ng-if="username" class="navbar-text navbar-right">
+                Signed in as {{username}}
+                <button ng-click="logout()" class="btn btn-primary">Logout</button>
+            </span>
+        </div>
+    </nav>
+    <div class="container" ng-view>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/PostController.js"></script>
+  <script src="controllers/AppController.js"></script>
+  <script src="controllers/UserController.js"></script>
+  <script src="controllers/LoginController.js"></script>
+  <script src="services/LocalStorageService.js"></script>
+  <script src="services/PostService.js"></script>
+  <script src="services/UserService.js"></script>
+  <script src="services/WebsocketService.js"></script>
+</body>
+</html>

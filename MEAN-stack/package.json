@@ -1,0 +1,15 @@
+{
+  "name": "MEAN-Stack",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Mean Stack example for Security training",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "jwt-simple": "^0.4.0",
+    "lodash": "^4.0.0",
+    "mongodb": "^2.1.4",
+    "ws": "^0.8.0"
+  }
+}

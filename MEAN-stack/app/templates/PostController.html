@@ -1,0 +1,30 @@
+<div class="container">
+    <form role="form" ng-submit="search()" class="form-group">
+        <div class="input-group">
+            <input id="search" type="text" placeholder="Search" ng-model="searchString" class="form-control" autofocus />
+            <span class="input-group-btn">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </span>
+        </div>
+    </form>
+    <h1>Recent posts</h1>
+    <form role="form" ng-show="loggedIn">
+        <div class="form-group">
+            <div class="input-group">
+                <input ng-model="postBody" class="form-control" />
+                <span class="input-group-btn">
+                    <button ng-click="submitPost()" class="btn btn-default">Add post</button>
+                </span>
+            </div>
+        </div>
+    </form>
+    <div ng-show="trustedSearch">
+        You searched for: <span ng-bind-html="trustedSearch"></span>
+    </div>
+    <div class="posts">
+        <div ng-repeat="post in posts | orderBy:'-date'" class="post">
+            <div class="well" ng-bind-html="post.trustedBody"></div>
+            <strong>@{{ post.username }}</strong>
+        </div>
+    </div>
+</div>

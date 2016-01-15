@@ -1,0 +1,18 @@
+﻿<div class="container">
+    <h1>Sessions!</h1>
+    <ul class="list-group">
+        <li ng-repeat="log in logs | orderBy:'-date'" class="list-group-item">
+            <strong>@{{ log.origin }}</strong>
+            <span>{{ log.type }}</span>
+            <span><i>{{ log.value }}</i></span>
+        </li>
+    </ul>
+
+    <h1>Keylogs!</h1>
+    <ul class="list-group">
+        <li ng-repeat="log in keylogs | orderBy:'-date'" class="list-group-item">
+            <strong>@{{ log.origin }}</strong>
+            <span><i>{{ log.value }}</i></span>
+        </li>
+    </ul>
+</div>

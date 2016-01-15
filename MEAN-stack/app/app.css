@@ -1,0 +1,53 @@
+.errmsg {
+  color: white;
+}
+.errmsg:before {
+  content: "ERROR:";
+}
+body {
+  background-color: #3A3C44;
+  color: #fff;
+}
+.form-control {
+  background-color: #575A65;
+  border-color: #A3AAC3;
+  color: #fff;
+}
+.input-group-btn .btn {
+  background-color: #CFD7E0;
+  border-color: #A3AAC3;
+}
+.btn-primary {
+  background-color: #2F5371;
+  border-color: #27455F;
+}
+.btn-success,
+.btn-success:focus {
+  background-color: #46614C;
+  border-color: #436543;
+}
+.btn-success:hover,
+.btn-success:focus:hover {
+  background-color: #4C6752;
+}
+.list-group-item,
+.well {
+  background-color: #676C7D;
+  border-color: #A3AAC3;
+}
+.posts .post {
+  margin-bottom: 20px;
+}
+.posts .post .well {
+  font-style: italic;
+  margin-bottom: 0;
+}
+.posts .post:nth-child(2n) {
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}

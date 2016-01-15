@@ -1,0 +1,16 @@
+<h4>Log In</h4>
+<div class="alert alert-warning" ng-show="error">
+    <strong>There was an error logging in</strong>
+</div>
+<form ng-submit="submitForm()">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" ng-model="email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input class="form-control" id="password" ng-model="password" type="password">
+    </div>
+    <input class="btn btn-success btn-lg btn-block" type="submit" value="Login" />
+</form>
+

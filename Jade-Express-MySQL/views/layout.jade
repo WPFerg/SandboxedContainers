@@ -1,0 +1,17 @@
+﻿doctype
+html
+  head
+    title Jade Express MySQL
+    link(rel='stylesheet', href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/app.css')
+  body
+    nav.navbar.navbar-default.navbar-inverse
+      div.container
+        ul.nav.navbar-nav
+          li: a(href="/") Posts
+          li: a(href="http://10.10.10.20/register") Register
+          li: a(href="/login") Login
+        if currentUser
+          span.navbar-text.navbar-right Signed in as #{currentUser.name}
+            a.btn.btn-primary.logout(href="/logout" role="button") Logout
+    block content

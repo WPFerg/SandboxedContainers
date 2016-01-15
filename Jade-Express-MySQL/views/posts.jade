@@ -1,0 +1,28 @@
+﻿extend layout
+block content
+  div.container
+    form(role="form" method="get" action="/")
+      div.form-group
+        div.input-group
+          input.form-control(type="text", name="search")
+          span.input-group-btn
+            button.btn.btn-default(type="submit") Search
+    h1 Recent posts
+    if currentUser
+      form(role="form" method="post")
+        div.form-group
+          div.input-group
+            input.form-control(type="text", name="body")
+            span.input-group-btn
+              button.btn.btn-default(type="submit") Add post
+    if !search
+      - search = ""
+    else
+      p!= "You searched for: " + decodeURIComponent(search)
+    div.posts
+      each post in posts
+        div.post
+          div.well!= post.body
+          strong!= '@' + post.username
+    if errmsg
+      h2.errmsg #{errmsg}

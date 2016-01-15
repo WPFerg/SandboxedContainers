@@ -1,0 +1,28 @@
+{
+    "name": "Attacker_Site",
+    "version": "0.0.0",
+    "description": "Attacker site example",
+    "main": "server.js",
+    "author": {
+        "name": "David Pizzi",
+        "email": "dpizzi@scottlogic.com"
+    },
+    "dependencies": {
+        "body-parser": "^1.14.1",
+        "express": "^4.13.3",
+        "express-winston": "^0.4.1",
+        "jwt-simple": "^0.3.1",
+        "lodash": "^3.10.1",
+        "mongoose": "^4.2.5",
+        "winston": "^2.1.0",
+        "ws": "^0.8.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-less": "^3.0.3",
+        "gulp-ng-annotate": "^1.1.0",
+        "gulp-nodemon": "^2.0.4",
+        "gulp-sourcemaps": "^1.6.0"
+    }
+}
